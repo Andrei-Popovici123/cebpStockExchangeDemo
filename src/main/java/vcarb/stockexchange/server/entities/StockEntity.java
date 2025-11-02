@@ -21,7 +21,6 @@ public class StockEntity {
     private int amount;
 
     @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "transactionId")
     private List<TransactionEntity> transactions = new ArrayList<>();
 
     @Column(nullable = false, precision = 15, scale = 2)

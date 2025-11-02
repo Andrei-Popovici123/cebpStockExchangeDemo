@@ -11,7 +11,7 @@ import java.util.function.Function;
 
 @RestController
 public class MainController {
-    enum TransactionType
+    /*enum TransactionType
     {
         POSITIVE,
         NEGATIVE
@@ -209,5 +209,5 @@ public class MainController {
         setAll();
         Stock response = getById(stocksList,stockID,Stock::getStockId);
         return Json.pretty(response);
-    }
+    }*/
 }

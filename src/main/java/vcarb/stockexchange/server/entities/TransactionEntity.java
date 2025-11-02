@@ -1,4 +1,4 @@
-﻿package vcarb.stockexchange.server.entities;
+package vcarb.stockexchange.server.entities;
 
 import jakarta.persistence.*;
 
