@@ -1,6 +1,7 @@
 package vcarb.stockexchange.server.controllers;
 
 import org.springframework.web.bind.annotation.*;
+import vcarb.stockexchange.server.DTOs.StockCreateDTO;
 import vcarb.stockexchange.server.entities.Stock;
 import vcarb.stockexchange.server.services.StockService;
 
@@ -28,7 +29,7 @@ public class StockController {
     }
 
     @PostMapping
-    public Stock createStock(@RequestBody Stock stock) {
+    public Stock createStock(@RequestBody StockCreateDTO stock) {
         return stockService.createStock(stock);
     }
 

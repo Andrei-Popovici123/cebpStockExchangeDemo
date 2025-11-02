@@ -1,6 +1,7 @@
 package vcarb.stockexchange.server.services;
 
 import org.springframework.stereotype.Service;
+import vcarb.stockexchange.server.DTOs.StockCreateDTO;
 import vcarb.stockexchange.server.entities.Stock;
 import vcarb.stockexchange.server.repositories.StockRepository;
 
@@ -23,8 +24,13 @@ public class StockService {
         return stockRepository.findById(id);
     }
 
-    public Stock createStock(Stock stock){
-        return stockRepository.save(stock);
+    public Stock createStock(StockCreateDTO stock){
+        return stockRepository.save(new Stock(
+                stock.name,
+                stock.amount,
+                stock.price,
+                stock.aprecCoef
+        ));
     }
 
     public Stock updateStock(Long id, Stock newStock){
