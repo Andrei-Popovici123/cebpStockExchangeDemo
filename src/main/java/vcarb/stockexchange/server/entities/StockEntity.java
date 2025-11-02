@@ -23,15 +23,15 @@ public class StockEntity {
     @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TransactionEntity> transactions = new ArrayList<>();
 
-    @Column(nullable = false, precision = 15, scale = 2)
-    private BigDecimal price;
+    @Column(nullable = false)
+    private double price;
 
     @Column(nullable = false)
     private double apreCoef = 0.1;
 
     public StockEntity(){}
 
-    public StockEntity(String name, int amount, BigDecimal price, double apreCoef) {
+    public StockEntity(String name, int amount, double price, double apreCoef) {
         this.name = name;
         this.amount = amount;
         this.price = price;
@@ -46,8 +46,8 @@ public class StockEntity {
     public int getAmount() { return amount; }
     public void setAmount(int amount) { this.amount = amount; }
 
-    public BigDecimal getPrice() { return price; }
-    public void setPrice(BigDecimal price) { this.price = price; }
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
 
     public double getApreCoef() { return apreCoef; }
     public void setApreCoef(double apreCoef) { this.apreCoef = apreCoef; }
