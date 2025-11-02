@@ -15,7 +15,7 @@ public class TransactionEntity {
     @Column(nullable = false)
     private int type;
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "stockId", nullable = false)
     private StockEntity stock;
 
