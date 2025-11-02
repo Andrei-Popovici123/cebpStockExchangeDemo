@@ -1,11 +1,13 @@
 package vcarb.stockexchange.server.services;
 
+import org.springframework.stereotype.Service;
 import vcarb.stockexchange.server.entities.Stock;
 import vcarb.stockexchange.server.repositories.StockRepository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class StockService {
     private final StockRepository stockRepository;
 

@@ -1,5 +1,6 @@
 package vcarb.stockexchange.server.services;
 
+import org.springframework.stereotype.Service;
 import vcarb.stockexchange.server.entities.Stock;
 import vcarb.stockexchange.server.entities.Transaction;
 import vcarb.stockexchange.server.repositories.StockRepository;
@@ -7,6 +8,7 @@ import vcarb.stockexchange.server.repositories.TransactionRepository;
 
 import java.util.List;
 
+@Service
 public class TransactionService {
     private final TransactionRepository transactionRepository;
     private final StockRepository stockRepository;
