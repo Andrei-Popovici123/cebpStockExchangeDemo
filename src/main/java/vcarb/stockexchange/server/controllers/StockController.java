@@ -1,9 +1,7 @@
 package vcarb.stockexchange.server.controllers;
 
-import io.swagger.v3.core.util.Json;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import vcarb.stockexchange.server.MainController;
 import vcarb.stockexchange.server.entities.StockEntity;
 import vcarb.stockexchange.server.repositories.StockRepository;
 
