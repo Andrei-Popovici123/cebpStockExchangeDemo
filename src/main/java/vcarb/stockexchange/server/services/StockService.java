@@ -68,17 +68,12 @@ public class StockService {
     @Transactional
     public synchronized void simulateRandomPrice(Long stockId) {
         StockEntity stock = stockRepository.findByIdForUpdate(stockId);
-        if (stock == null) return;
+
         // Random delta between -5 and 5
-        double delta = -5 + 10 * random.nextDouble();
-
-        // Apply appreciation coefficient
-        delta *= (1 + stock.getApreCoef());
-
-        // Update the stock price
-        stock.setPrice(stock.getPrice() + delta);
+        stock.setPrice(stock.getPrice() + 10 * random.nextDouble());
         stockRepository.save(stock);
-
+        System.out.println("Stock has changed due to unforeseen circumstances" + stock.getName() +
+                " new price: " + stock.getPrice() );
     }
 
 
