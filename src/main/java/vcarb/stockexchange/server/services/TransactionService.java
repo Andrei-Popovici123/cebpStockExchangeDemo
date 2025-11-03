@@ -2,6 +2,7 @@ package vcarb.stockexchange.server.services;
 
 import org.springframework.stereotype.Service;
 import vcarb.stockexchange.server.dto.StockDTO;
+import vcarb.stockexchange.server.dto.TransactionDTO;
 import vcarb.stockexchange.server.entities.StockEntity;
 import vcarb.stockexchange.server.entities.TransactionEntity;
 import vcarb.stockexchange.server.repositories.StockRepository;
@@ -32,12 +33,16 @@ public class TransactionService {
         return transactionRepository.findByStockId(stockId);
     }
 
-    public TransactionEntity createTransaction(TransactionEntity transaction) {
-        StockEntity stock = stockRepository.findById(transaction.getStock().getId())
-                .orElseThrow(() -> new RuntimeException("Stock doesn't exist"));
+    public TransactionEntity createTransaction(TransactionDTO transactionDTO) {
 
-        transaction.setStock(stock);
-        return transactionRepository.save(transaction);
+        return transactionRepository.save( new TransactionEntity(
+                transactionDTO.type,
+                stockRepository.findById(transactionDTO.stockId)
+                        .orElseThrow(() -> new RuntimeException("Stock not found with ID")),
+                transactionDTO.userId,
+                transactionDTO.amount,
+                transactionDTO.totalPrice
+        ));
     }
 
     public void deleteTransaction(Long transactionId) {

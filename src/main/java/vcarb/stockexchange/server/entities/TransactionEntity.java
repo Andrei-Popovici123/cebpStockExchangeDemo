@@ -12,8 +12,9 @@ public class TransactionEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long transactionId;
 
+    // e.g., 0 = BUY, 1 = SELL
     @Column(nullable = false)
-    private int type;
+    private Integer type;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "stockId", nullable = false)
@@ -23,14 +24,14 @@ public class TransactionEntity {
     private Long userId;
 
     @Column(nullable = false)
-    private int amount;
+    private double amount;
 
-    @Column(nullable = false, precision = 15, scale = 2)
-    private BigDecimal totalPrice;
+    @Column(nullable = false)
+    private double totalPrice;
 
     public TransactionEntity(){}
 
-    public TransactionEntity(int type, StockEntity stock, Long userId, int amount, BigDecimal totalPrice) {
+    public TransactionEntity(int type, StockEntity stock, Long userId, double amount, double totalPrice) {
         this.type = type;
         this.stock = stock;
         this.userId = userId;
@@ -39,6 +40,7 @@ public class TransactionEntity {
     }
 
     public Long getId() { return transactionId; }
+    public void SetID(Long id){ this.transactionId =id;}
     public int getType() { return type; }
     public void setType(int type) { this.type = type; }
 
@@ -48,10 +50,10 @@ public class TransactionEntity {
     public Long getUserId() { return userId; }
     public void setUserId(Long userId) { this.userId = userId; }
 
-    public int getAmount() { return amount; }
-    public void setAmount(int amount) { this.amount = amount; }
+    public double getAmount() { return amount; }
+    public void setAmount(double amount) { this.amount = amount; }
 
-    public BigDecimal getTotalPrice() { return totalPrice; }
-    public void setTotalPrice(BigDecimal totalPrice) { this.totalPrice = totalPrice; }
+    public double getTotalPrice() { return totalPrice; }
+    public void setTotalPrice(double totalPrice) { this.totalPrice = totalPrice; }
 
 }

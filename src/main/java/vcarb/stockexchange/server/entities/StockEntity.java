@@ -1,5 +1,6 @@
 package vcarb.stockexchange.server.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -21,7 +22,8 @@ public class StockEntity {
     private int amount;
 
     @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<TransactionEntity> transactions = new ArrayList<>();
+    @JsonIgnore
+    private List<TransactionEntity> transactions;
 
     @Column(nullable = false)
     private double price;
