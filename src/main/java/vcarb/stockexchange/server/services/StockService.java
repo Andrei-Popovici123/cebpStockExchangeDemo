@@ -10,17 +10,24 @@ import vcarb.stockexchange.server.repositories.StockRepository;
 import vcarb.stockexchange.server.repositories.TransactionRepository;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class StockService {
     private final StockRepository stockRepository;
     private final TransactionRepository transactionRepository;
 
+    private Map<Long, Double> userBalances = new ConcurrentHashMap<>();
+
     public StockService(StockRepository stockRepository, TransactionRepository transactionRepository) {
 
         this.stockRepository = stockRepository;
         this.transactionRepository = transactionRepository;
+
+        userBalances.put(10L, 1000.0);
+        userBalances.put(11L, 50.0);
     }
 
     public List<StockEntity> getAllStocks() {
@@ -63,12 +70,16 @@ public class StockService {
         if(stock.getAmount() < amount){
             throw new RuntimeException("Not enough stock");
         }
+        double totalPrice = stock.getPrice() + amount;
+
+        double balance = userBalances.getOrDefault(userId, 0.0);
+        if(balance < totalPrice){
+            throw new RuntimeException("Not enough balance for user " + userId);
+        }
 
         stock.setAmount(stock.getAmount() - amount);
         stock.setPrice(stock.getPrice() + (1+ stock.getApreCoef()));
         stockRepository.save(stock);
-
-        double totalPrice = stock.getPrice() + amount;
 
         TransactionEntity transaction = new TransactionEntity(0, stock, userId, amount, totalPrice);
         transactionRepository.save(transaction);
@@ -104,5 +115,9 @@ public class StockService {
                 " | TotalPrice: " + totalPrice);
 
         return transaction;
+    }
+
+    public Map<Long, Double> getUserBalances() {
+        return userBalances;
     }
 }
