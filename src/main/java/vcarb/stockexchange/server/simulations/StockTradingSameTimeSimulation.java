@@ -2,6 +2,7 @@ package vcarb.stockexchange.server.simulations;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import vcarb.stockexchange.server.services.StockService;
 
@@ -9,7 +10,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Component
-public class StockTradingSameTimeSimulation implements CommandLineRunner {
+public class StockTradingSameTimeSimulation implements Runnable {
     private final StockService stockService;
 
     public StockTradingSameTimeSimulation(@Autowired StockService stockService) {
@@ -17,7 +18,7 @@ public class StockTradingSameTimeSimulation implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args){
+    public void run(){
         ExecutorService executor = Executors.newFixedThreadPool(4);
 
         Long stockId = 1L;
@@ -27,7 +28,6 @@ public class StockTradingSameTimeSimulation implements CommandLineRunner {
         executor.submit(() -> {
             try {
                 stockService.buyStock(stockId, user1, 5);
-                System.out.println("User1 bought stock");
             } catch (Exception e) {
                 System.out.println("User1 failed: " + e.getMessage());
             }
@@ -36,7 +36,6 @@ public class StockTradingSameTimeSimulation implements CommandLineRunner {
         executor.submit(() -> {
             try {
                 stockService.buyStock(stockId, user2, 5);
-                System.out.println("User2 bought stock");
             } catch (Exception e) {
                 System.out.println("User2 failed: " + e.getMessage());
             }
@@ -44,4 +43,10 @@ public class StockTradingSameTimeSimulation implements CommandLineRunner {
 
         executor.shutdown();
     }
+
+    @Scheduled(fixedRate = 20000)
+    public void scheduleSimulation(){
+        run();
+    }
+
 }

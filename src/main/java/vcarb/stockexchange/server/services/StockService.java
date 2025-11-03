@@ -71,7 +71,16 @@ public class StockService {
         double totalPrice = stock.getPrice() + amount;
 
         TransactionEntity transaction = new TransactionEntity(0, stock, userId, amount, totalPrice);
-        return transactionRepository.save(transaction);
+        transactionRepository.save(transaction);
+
+        System.out.println("Transaction: " +
+                (transaction.getType() == 0 ? "BUY" : "SELL") +
+                " | User: " + userId +
+                " | Stock: " + stock.getName() +
+                " | Amount: " + amount +
+                " | TotalPrice: " + totalPrice);
+
+        return transaction;
     }
 
     @Transactional
@@ -85,6 +94,15 @@ public class StockService {
         double totalPrice = stock.getPrice() + amount;
 
         TransactionEntity transaction = new TransactionEntity(0, stock, userId, amount, totalPrice);
-        return transactionRepository.save(transaction);
+        transactionRepository.save(transaction);
+
+        System.out.println("Transaction: " +
+                (transaction.getType() == 0 ? "BUY" : "SELL") +
+                " | User: " + userId +
+                " | Stock: " + stock.getName() +
+                " | Amount: " + amount +
+                " | TotalPrice: " + totalPrice);
+
+        return transaction;
     }
 }
