@@ -30,9 +30,9 @@ public class TransactionController {
         return transactionService.getTransactionById(transactionID)
                 .orElseThrow(()-> new RuntimeException("Transaction doesn't exist"));
     }
-    @GetMapping("/stock/{stockId}")
-    public List<TransactionEntity> getTransactionByStockId(@PathVariable long StockID){
-        return transactionService.getTransactionsByStockId(StockID);
+    @GetMapping("/stocks/{stockID}")
+    public List<TransactionEntity> getTransactionByStockId(@PathVariable long stockID){
+        return transactionService.getTransactionsByStockId(stockID);
     }
 
     @PostMapping
