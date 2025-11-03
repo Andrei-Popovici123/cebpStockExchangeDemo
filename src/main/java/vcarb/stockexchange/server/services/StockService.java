@@ -12,6 +12,7 @@ import vcarb.stockexchange.server.repositories.TransactionRepository;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Service
@@ -63,6 +64,23 @@ public class StockService {
     public void deleteSock(Long id) {
         stockRepository.deleteById(id);
     }
+    private final Random random = new Random();
+    @Transactional
+    public synchronized void simulateRandomPrice(Long stockId) {
+        StockEntity stock = stockRepository.findByIdForUpdate(stockId);
+        if (stock == null) return;
+        // Random delta between -5 and 5
+        double delta = -5 + 10 * random.nextDouble();
+
+        // Apply appreciation coefficient
+        delta *= (1 + stock.getApreCoef());
+
+        // Update the stock price
+        stock.setPrice(stock.getPrice() + delta);
+        stockRepository.save(stock);
+
+    }
+
 
     @Transactional
     public synchronized TransactionEntity buyStock(Long stockId, Long userId, int amount){
