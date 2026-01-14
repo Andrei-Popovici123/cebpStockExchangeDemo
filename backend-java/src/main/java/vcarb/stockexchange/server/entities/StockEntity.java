@@ -31,6 +31,10 @@ public class StockEntity {
     @Column(nullable = false)
     private double apreCoef = 0.1;
 
+
+    @OneToOne
+    @JoinColumn(name = "profile_id", nullable = false, unique = true)
+    private StockHistoryEntity stockHistory;
     public StockEntity(){}
 
     public StockEntity(String name, int amount, double price, double apreCoef) {
@@ -56,4 +60,12 @@ public class StockEntity {
 
     public List<TransactionEntity> getTransactions() { return transactions; }
     public void setTransactions(List<TransactionEntity> transactions) { this.transactions = transactions; }
+
+    public StockHistoryEntity getStockHistory() {
+        return stockHistory;
+    }
+
+    public void setStockHistory(StockHistoryEntity stockHistory) {
+        this.stockHistory = stockHistory;
+    }
 }
