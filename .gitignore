@@ -31,3 +31,10 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### VS ###
+.vs
+.backend-dotnet/StockExchangeDotNetBE/obj
+.bin
+/backend-dotnet/StockExchangeDotNetBE/StockExchangeDotNetBE/obj
