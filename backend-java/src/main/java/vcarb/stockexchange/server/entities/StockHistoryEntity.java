@@ -29,8 +29,9 @@ public class StockHistoryEntity {
     @OneToOne(mappedBy = "stockHistory")
     private StockEntity stock;
 
-    public StockHistoryEntity(double price_open, double price_closed, double price_high, double price_low, int units_traded, LocalDateTime timeframe) {
+    public StockHistoryEntity(double price_open, StockEntity stock, double price_closed, double price_high, double price_low, int units_traded, LocalDateTime timeframe) {
         this.timeframe = timeframe;
+        this.stock=stock;
         this.units_traded = units_traded;
         this.price_closed = price_closed;
         this.price_high = price_high;
