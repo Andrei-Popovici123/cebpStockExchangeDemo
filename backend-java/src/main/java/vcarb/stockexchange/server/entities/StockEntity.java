@@ -32,8 +32,8 @@ public class StockEntity {
     private double apreCoef = 0.1;
 
 
-    @OneToOne
-    @JoinColumn(name = "profile_id", nullable = false, unique = true)
+    @OneToOne(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
+   @JsonIgnore
     private StockHistoryEntity stockHistory;
     public StockEntity(){}
 

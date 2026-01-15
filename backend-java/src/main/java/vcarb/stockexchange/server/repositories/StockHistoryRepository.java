@@ -1,4 +1,4 @@
-﻿package vcarb.stockexchange.server.repositories;
+package vcarb.stockexchange.server.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import vcarb.stockexchange.server.entities.StockHistoryEntity;

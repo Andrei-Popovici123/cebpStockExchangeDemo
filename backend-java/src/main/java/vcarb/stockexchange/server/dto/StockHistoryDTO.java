@@ -1,4 +1,4 @@
-﻿package vcarb.stockexchange.server.dto;
+package vcarb.stockexchange.server.dto;
 
 public class StockHistoryDTO {
     public  double price_open;

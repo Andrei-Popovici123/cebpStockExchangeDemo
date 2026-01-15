@@ -1,5 +1,6 @@
 package vcarb.stockexchange.server.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import org.apache.logging.log4j.util.Lazy;
 
@@ -26,9 +27,12 @@ public class StockHistoryEntity {
     @Column(nullable = false)
     LocalDateTime timeframe;
 
-    @OneToOne(mappedBy = "stockHistory")
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "stockId", nullable = false, unique = true)
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private StockEntity stock;
 
+    public  StockHistoryEntity(){};
     public StockHistoryEntity(double price_open, StockEntity stock, double price_closed, double price_high, double price_low, int units_traded, LocalDateTime timeframe) {
         this.timeframe = timeframe;
         this.stock=stock;

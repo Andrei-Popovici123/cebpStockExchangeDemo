@@ -4,8 +4,10 @@ import jakarta.transaction.Transaction;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 import vcarb.stockexchange.server.dto.StockDTO;
+import vcarb.stockexchange.server.dto.StockHistoryDTO;
 import vcarb.stockexchange.server.entities.StockEntity;
 import vcarb.stockexchange.server.entities.TransactionEntity;
+import vcarb.stockexchange.server.repositories.StockHistoryRepository;
 import vcarb.stockexchange.server.repositories.StockRepository;
 import vcarb.stockexchange.server.repositories.TransactionRepository;
 
@@ -19,13 +21,16 @@ import java.util.concurrent.ConcurrentHashMap;
 public class StockService {
     private final StockRepository stockRepository;
     private final TransactionRepository transactionRepository;
+    private final StockHistoryService stockHistoryService;
 
     private Map<Long, Double> userBalances = new ConcurrentHashMap<>();
 
-    public StockService(StockRepository stockRepository, TransactionRepository transactionRepository) {
+    public StockService(StockRepository stockRepository, TransactionRepository transactionRepository,
+                        StockHistoryService stockHistoryService) {
 
         this.stockRepository = stockRepository;
         this.transactionRepository = transactionRepository;
+        this.stockHistoryService = stockHistoryService;
 
         userBalances.put(10L, 1000.0);
         userBalances.put(11L, 50.0);
@@ -40,13 +45,16 @@ public class StockService {
     }
 
     public StockEntity createStock(StockDTO stockDTO) {
-        return stockRepository.save(new StockEntity(
+
+        StockEntity stock = stockRepository.save(new StockEntity(
                 stockDTO.name,
                 stockDTO.amount,
                 stockDTO.price,
                 stockDTO.apreCoef
         ));
+        stockHistoryService.createInitialHistory(stock);
 
+        return  stock;
     }
 
     public StockEntity updateStock(Long id, StockDTO stockDTO) {
