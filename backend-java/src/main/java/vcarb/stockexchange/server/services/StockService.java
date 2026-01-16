@@ -76,9 +76,9 @@ public class StockService {
     @Transactional
     public synchronized void simulateRandomPrice(Long stockId) {
         StockEntity stock = stockRepository.findByIdForUpdate(stockId);
-
+        double newPrice=(stock.getPrice() + 200 * random.nextDouble())-100;
         // Random delta between -5 and 5
-        stock.setPrice(stock.getPrice() + 10 * random.nextDouble());
+        stock.setPrice(Math.max(0,newPrice));
         stockRepository.save(stock);
         System.out.println("Stock has changed due to unforeseen circumstances" + stock.getName() +
                 " new price: " + stock.getPrice() );
@@ -125,7 +125,7 @@ public class StockService {
 
         double totalPrice = stock.getPrice() + amount;
 
-        TransactionEntity transaction = new TransactionEntity(0, stock, userId, amount, totalPrice);
+        TransactionEntity transaction = new TransactionEntity(1, stock, userId, amount, totalPrice);
         transactionRepository.save(transaction);
 
         System.out.println("Transaction: " +
