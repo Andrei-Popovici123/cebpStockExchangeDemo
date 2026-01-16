@@ -47,6 +47,19 @@ public class StockHistoryService {
         ));
     }
 
+    public StockHistoryEntity updateStockHistory(Long id,StockHistoryDTO stockHistoryDTO){
+        return stockHistoryRepository.findById(id)
+                .map( stockHistory -> {
+                    stockHistory.setPrice_closed(stockHistoryDTO.price_closed);
+                    stockHistory.setPrice_high(stockHistoryDTO.price_high);
+                    stockHistory.setPrice_low(stockHistoryDTO.price_low);
+                    stockHistory.setPrice_open(stockHistoryDTO.price_open);
+                    stockHistory.setUnits_traded(stockHistoryDTO.units_traded);
+                    return stockHistoryRepository.save(stockHistory);
+                })
+                .orElseThrow(()-> new RuntimeException("Unable tho fetch Stock History"));
+    }
+
     public void deleteStockHistory(Long Id) {stockHistoryRepository.deleteById(Id);
     }
 
