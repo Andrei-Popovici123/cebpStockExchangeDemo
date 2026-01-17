@@ -9,6 +9,6 @@ namespace StockExchange.BusinessLogic.Interfaces
     {
         Task<IEnumerable<UserDto>> GetAllUsersAsync();
         Task<UserDto> GetUserByIdAsync(int id);
-        Task<UserDto> UpdateUserAsync(int id, string userName);
+        Task<UserDto> UpdateUserAsync(int id, UserUpdateDto user);
     }
 }

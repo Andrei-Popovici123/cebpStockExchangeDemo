@@ -46,16 +46,16 @@ namespace StockExchange.BusinessLogic
             };
         }
 
-        public async Task<UserDto> UpdateUserAsync(int id, string userName)
+        public async Task<UserDto> UpdateUserAsync(int id, UserUpdateDto user)
         {
-            var user = await _userRepository.GetByIdAsync(id);
+            var userToUpdate = await _userRepository.GetByIdAsync(id);
             if (user == null)
             {
                 throw new Exception("User not found");
             }
-            user.UserName = userName;
+            userToUpdate.UserName = user.UserName;
 
-            var newUser = await _userRepository.UpdateAsync(user);
+            var newUser = await _userRepository.UpdateAsync(userToUpdate);
 
             return new UserDto
             {
