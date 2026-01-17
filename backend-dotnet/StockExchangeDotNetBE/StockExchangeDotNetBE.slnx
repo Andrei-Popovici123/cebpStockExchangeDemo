@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="StockExchange.BusinessLogic/StockExchange.BusinessLogic.csproj" Id="f24db162-544b-4779-8d3e-547a1258690e" />
+  <Project Path="StockExchange.DataAccess/StockExchange.DataAccess.csproj" Id="cfbfa4b1-3693-4096-b28f-5f20686ccae1" />
+  <Project Path="StockExchangeDotNetBE/StockExchangeDotNetBE.csproj" />
+</Solution>
