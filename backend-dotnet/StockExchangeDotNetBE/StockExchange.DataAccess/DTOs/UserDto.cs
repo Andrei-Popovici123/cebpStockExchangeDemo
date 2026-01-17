@@ -8,7 +8,7 @@ namespace StockExchange.DataAccess.DTOs
     {
         public int Id { get; set; }
         public string UserName { get; set; } = string.Empty;
-        public string Role { get; set; } = string.Empty;
+        public bool Role { get; set; }
         public DateTime CreatedAt { get; set; }
     }
 }

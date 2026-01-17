@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\StockExchange.BusinessLogic\StockExchange.BusinessLogic.csproj" />
     <ProjectReference Include="..\StockExchange.DataAccess\StockExchange.DataAccess.csproj" />
   </ItemGroup>
 

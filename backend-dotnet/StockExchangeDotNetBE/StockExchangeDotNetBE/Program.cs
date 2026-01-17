@@ -1,8 +1,12 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
+using StockExchange.BusinessLogic;
+using StockExchange.BusinessLogic.Interfaces;
 using StockExchange.DataAccess;
 using StockExchange.DataAccess.Models;
+using StockExchange.DataAccess.Repositories;
+using StockExchange.DataAccess.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +24,12 @@ builder.Services.AddDbContext<StockExchangeDBContext>(options =>
 builder.Services.AddIdentity<User, IdentityRole<int>>()
     .AddEntityFrameworkStores<StockExchangeDBContext>()
     .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<IRepository<User>, BaseRepository<User>>();
+builder.Services.AddScoped<IUserService, UserService>();
+
+builder.Services.AddScoped<IBankAccountsRepository, BankAccountsRepository>();
+builder.Services.AddScoped<IBankAccountService, BankAccountService>();
 
 builder.Services.AddCors(options =>
 {

@@ -41,3 +41,4 @@ build/
 /backend-dotnet/StockExchangeDotNetBE/StockExchange.DataAccess/obj
 /backend-dotnet/StockExchangeDotNetBE/StockExchange.DataAccess/bin/Debug/net10.0
 /backend-dotnet/StockExchangeDotNetBE/StockExchangeDotNetBE/bin/Debug/net10.0
+/backend-dotnet/StockExchangeDotNetBE/StockExchange.BusinessLogic/obj
