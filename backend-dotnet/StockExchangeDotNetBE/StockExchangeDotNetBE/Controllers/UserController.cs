@@ -35,5 +35,12 @@ namespace StockExchangeDotNetBE.Controllers
             var user = await _userService.UpdateUserAsync(id, userInfo);
             return Ok(user);
         }
+
+        [HttpGet, Route("/api/users/username/{username}")]
+        public async Task<IActionResult> GetByUsername(string username)
+        {
+            var user = await _userService.GetUserByUsernameAsync(username);
+            return Ok(user);
+        }
     }
 }

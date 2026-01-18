@@ -10,8 +10,8 @@ namespace StockExchange.BusinessLogic
 {
     public class UserService : IUserService
     {
-        private readonly IRepository<User> _userRepository;
-        public UserService(IRepository<User> userRepository)
+        private readonly IUserRepository _userRepository;
+        public UserService(IUserRepository userRepository)
         {
             _userRepository = userRepository;
         }
@@ -44,6 +44,23 @@ namespace StockExchange.BusinessLogic
                 Role = user.Role,
                 CreatedAt = user.CreatedAt
             };
+        }
+
+        public async Task<UserDto> GetUserByUsernameAsync(string username)
+        {
+            var user = await _userRepository.GetUserByUsername(username);
+            if (user == null)
+            {
+                throw new Exception("User not found");
+            }
+            return new UserDto
+            {
+                Id = user.Id,
+                UserName = user.UserName,
+                Role = user.Role,
+                CreatedAt = user.CreatedAt
+            };
+
         }
 
         public async Task<UserDto> UpdateUserAsync(int id, UserUpdateDto user)
