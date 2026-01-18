@@ -25,7 +25,7 @@ builder.Services.AddIdentity<User, IdentityRole<int>>()
     .AddEntityFrameworkStores<StockExchangeDBContext>()
     .AddDefaultTokenProviders();
 
-builder.Services.AddScoped<IRepository<User>, BaseRepository<User>>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddScoped<IBankAccountsRepository, BankAccountsRepository>();
@@ -52,7 +52,7 @@ if (app.Environment.IsDevelopment())
 
 }
 
-app.UseHttpsRedirection();
+// app.UseHttpsRedirection();
 
 app.UseAuthentication();
 app.UseAuthorization();
