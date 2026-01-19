@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "name": "AAPL",
+        "amount": 1500000,
+        "price": 112.80,
+        "apreCoef": 1.05
+    },
+    {
+        "id": 2,
+        "name": "MSFT",
+        "amount": 850000,
+        "price": 154.50,
+        "apreCoef": 1.02
+    },
+    {
+        "id": 3,
+        "name": "AMZN",
+        "amount": 400000,
+        "price": 3212.40,
+        "apreCoef": 0.98
+    },
+    {
+        "id": 4,
+        "name": "TSLA",
+        "amount": 2100000,
+        "price": 240.80,
+        "apreCoef": 1.15
+    },
+    {
+        "id": 5,
+        "name": "GOOGL",
+        "amount": 600000,
+        "price": 173.90,
+        "apreCoef": 1.01
+    },
+    {
+        "id": 6,
+        "name": "INTC",
+        "amount": 3500000,
+        "price": 46.10,
+        "apreCoef": 0.95
+    },
+    {
+        "id": 7,
+        "name": "NVDA",
+        "amount": 950000,
+        "price": 539.15,
+        "apreCoef": 1.25
+    },
+    {
+        "id": 8,
+        "name": "META",
+        "amount": 1100000,
+        "price": 334.20,
+        "apreCoef": 1.08
+    },
+    {
+        "id": 9,
+        "name": "AMD",
+        "amount": 1800000,
+        "price": 116.80,
+        "apreCoef": 1.12
+    },
+    {
+        "id": 10,
+        "name": "PFE",
+        "amount": 4200000,
+        "price": 64.15,
+        "apreCoef": 0.92
+    },
+    {
+        "id": 11,
+        "name": "NFLX",
+        "amount": 300000,
+        "price": 214.30,
+        "apreCoef": 1.04
+    }
+]

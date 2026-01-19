@@ -1,14 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-export interface TransactionModel {
-  type: number;       // 0 = buy, 1 = sell
-  stock: string;      // stock name
-  userId: number;
-  amount: number;
-  totalPrice: number;
-  id: number;
-}
+import { TransactionModel } from '../../../shared/services/TransactionService';
 
 @Component({
   selector: 'app-transaction-card',

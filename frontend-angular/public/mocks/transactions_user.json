@@ -1,0 +1,128 @@
+[
+    {
+        "id": 1,
+        "type": 0,
+        "userId": 101,
+        "amount": 10,
+        "totalPrice": 1128.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 2,
+        "type": 1,
+        "userId": 101,
+        "amount": 5,
+        "totalPrice": 1204.00,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
+    },
+    {
+        "id": 3,
+        "type": 0,
+        "userId": 101,
+        "amount": 15,
+        "totalPrice": 8087.25,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 4,
+        "type": 0,
+        "userId": 101,
+        "amount": 25,
+        "totalPrice": 2820.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 5,
+        "type": 1,
+        "userId": 101,
+        "amount": 8,
+        "totalPrice": 1236.00,
+        "stock": {
+            "id": 2,
+            "name": "MSFT",
+            "amount": 850000,
+            "price": 154.50,
+            "apreCoef": 1.02
+        }
+    },
+    {
+        "id": 6,
+        "type": 0,
+        "userId": 101,
+        "amount": 2,
+        "totalPrice": 6424.80,
+        "stock": {
+            "id": 3,
+            "name": "AMZN",
+            "amount": 400000,
+            "price": 3212.40,
+            "apreCoef": 0.98
+        }
+    },
+    {
+        "id": 7,
+        "type": 1,
+        "userId": 101,
+        "amount": 3,
+        "totalPrice": 1626.45,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 8,
+        "type": 0,
+        "userId": 101,
+        "amount": 12,
+        "totalPrice": 2878.80,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
+    },
+    {
+        "id": 9,
+        "type": 0,
+        "userId": 101,
+        "amount": 20,
+        "totalPrice": 3478.00,
+        "stock": {
+            "id": 5,
+            "name": "GOOGL",
+            "amount": 600000,
+            "price": 173.90,
+            "apreCoef": 1.01
+        }
+    }
+]
