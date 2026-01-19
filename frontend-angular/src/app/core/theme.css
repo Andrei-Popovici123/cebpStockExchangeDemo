@@ -1,0 +1,40 @@
+:root {
+  --color-cards: #ffffff;
+  --color-cards-dark: #101010;
+
+  --color-cards-accent: #f6f6f6;
+  --color-cards-accent-dark: #181818;
+
+  --color-bg: #eeeeee;
+  --color-bg-dark: #1d1d1d;
+
+  --color-header-bg: #cccccc;
+
+  --color-text: #1d1d1d;
+  --color-text-header: #eeeeee;
+  --color-text-dark: #eeeeee;
+
+  --color-secondary-blue: #034bb8;
+  --color-secondary-red: #ed1f21;
+  --color-secondary-yellow: #fcdf53;
+
+  --color-secondary-blue-h: #060086;
+  --color-secondary-red-h: #d11114;
+  --color-secondary-yellow-h: #eeba11;
+
+  --color-special-green: #31d22c;
+
+  --color-feedback-success: #31d22c;
+  --color-feedback-warning: #fdc938;
+  --color-feedback-fail: #ed1f21;
+
+  --color-border: #e0e0e0;
+}
+
+/* Dark mode */
+.dark-theme {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-dark);
+  --color-cards: var(--color-cards-dark);
+  --color-cards-accent: var(--color-cards-accent-dark)
+}

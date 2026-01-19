@@ -1,0 +1,20 @@
+.info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 24px;
+    border-radius: 12px;
+    background: var(--color-cards);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: var(--default-font-h1-size);
+}

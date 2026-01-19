@@ -1,0 +1,13 @@
+<div class="register-auth-card">
+    <h2>Create Account</h2>
+
+    <input type="text" placeholder="Username" [(ngModel)]="username">
+
+    <input type="password" placeholder="Password" [(ngModel)]="password">
+
+    <a routerLink="/login">Log In</a>
+
+    <button (click)="register()">Register</button>
+
+    <p class="register-message">{{ message }}</p>
+</div>

@@ -1,0 +1,10 @@
+<div class="catalog-card">
+    <div class="catalog-header">
+        <h2>Stocks</h2>
+
+    </div>
+
+    <div class="catalog-grid">
+        <app-stock-card *ngFor="let s of stocks" [title]="s.name" [candles]="s.candles"> </app-stock-card>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="trends-dashboard">
+
+    <h2>Market Trends</h2>
+
+    <div *ngIf="loading">Loading trends...</div>
+
+    <div class="trend-list" *ngIf="!loading">
+        <app-candle-stock-info-card *ngFor="let t of trends" [title]="t.stock" [data]="t.candles">
+        </app-candle-stock-info-card>
+    </div>
+
+</div>

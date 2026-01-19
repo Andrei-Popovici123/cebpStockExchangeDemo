@@ -1,0 +1,17 @@
+<div class="transaction-card">
+
+    <!-- Title: Stock name -->
+    <h2 class="stock-title">{{ transaction.stock }}</h2>
+
+    <!-- Amount + Total Price (top-right) -->
+    <div class="right-info">
+        <div>Amount: {{ transaction.amount }}</div>
+        <div>Total: {{ transaction.totalPrice }}</div>
+    </div>
+
+    <!-- Type label (bottom-right) -->
+    <div class="type-label">
+        {{ typeLabel }}
+    </div>
+
+</div>

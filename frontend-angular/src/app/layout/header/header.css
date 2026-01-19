@@ -1,0 +1,121 @@
+.header {
+  width: 100%;
+  background: var(--color-bg);
+  color: var(--color-secondary-blue);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Main nav layout */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  /* allows independent heights */
+  width: 100%;
+}
+
+/* LEFT SECTION */
+.nav-left {
+  border-radius: 0px 0px 50px 0px;
+  padding: var(--nav-left-padding);
+  background: var(--color-secondary-blue);
+  height: var(--nav-left-height);
+  width: var(--nav-left-width);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--nav-gap);
+  z-index: 2000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  ;
+
+}
+
+/* RIGHT SECTION */
+.nav-right {
+  display: flex;
+  justify-content: space-evenly;
+  border-radius: 0px 0px 0px 50px;
+  background: var(--color-secondary-blue);
+  height: var(--nav-right-height);
+  width: var(--nav-right-width);
+  padding: var(--nav-right-padding);
+  display: flex;
+  align-items: center;
+  gap: var(--nav-gap);
+  z-index: 2000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+
+}
+
+/* CENTER SECTION */
+.nav-center {
+  background: var(--color-secondary-blue-h);
+  width: 100%;
+  height: var(--nav-center-height);
+  padding: var(--nav-center-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logo {
+  width: var(--header-logo-size);
+  height: var(--header-logo-size);
+  transition: transform 0.2s ease;
+  transform: translateY(var(--header-logo-translate));
+}
+
+.nav-logo:hover {
+  transform: translateY(var(--header-logo-translate)) scale(1.4);
+}
+
+
+/* Buttons & icons */
+.nav-btn {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding: var(--nav-left-padding);
+  text-decoration: none;
+  color: var(--color-text-header);
+  font-weight: 600;
+  font-size: var(--header-font-size);
+  height: 100%;
+  text-decoration: none;
+}
+
+.nav-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: var(--header-underline-bottom-size);
+  width: 0%;
+  height: 5px;
+  background: var(--color-secondary-yellow-h);
+  transition: width 0.25s ease;
+}
+
+.nav-btn:hover::after {
+  width: 100%;
+}
+
+.icon {
+  width: var(--header-icon-size);
+  height: var(--header-icon-size);
+  cursor: pointer;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}

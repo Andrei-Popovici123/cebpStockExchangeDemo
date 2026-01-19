@@ -1,0 +1,10 @@
+<div class="account-card">
+    <h2>{{ username }}'s Bank Accounts</h2>
+
+    <div *ngIf="loading">Loading accounts...</div>
+
+    <div class="accounts" *ngIf="!loading">
+        <app-bank-account-card *ngFor="let acc of bankAccounts" [currency]="acc.currency" [amount]="acc.amount">
+        </app-bank-account-card>
+    </div>
+</div>

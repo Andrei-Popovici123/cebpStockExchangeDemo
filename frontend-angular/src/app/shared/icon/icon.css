@@ -1,0 +1,7 @@
+.icon {
+    display: inline-block;
+    object-fit: contain;
+    cursor: pointer;
+    width: var(--header-icon-size, 24px);
+    height: var(--header-icon-size, 24px);
+}
