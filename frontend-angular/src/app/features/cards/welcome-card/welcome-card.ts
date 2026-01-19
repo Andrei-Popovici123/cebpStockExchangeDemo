@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { AuthStateService } from '../../../shared/services/AuthStateService';
 
 @Component({
   selector: 'app-welcome-card',
@@ -7,7 +8,14 @@ import { Component, Input } from '@angular/core';
   styleUrl: './welcome-card.css'
 })
 export class WelcomeCard {
-  @Input() username: string | null = null;
+
+  username: string | null = null;
+
+  constructor(private authState: AuthStateService) {
+    this.authState.username$.subscribe(name => {
+      this.username = name;
+    });
+  }
 
   get message() {
     return this.username

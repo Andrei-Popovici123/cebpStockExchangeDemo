@@ -1,6 +1,8 @@
 <div class="account-card">
     <h2>{{ username }}'s Bank Accounts</h2>
 
+    <button class="logout-btn" (click)="logout()">Logout</button>
+
     <div *ngIf="loading">Loading accounts...</div>
 
     <div class="accounts" *ngIf="!loading">
