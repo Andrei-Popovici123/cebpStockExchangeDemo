@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "type": 0,
+        "stock": "AAPL",
+        "userId": 101,
+        "amount": 10,
+        "totalPrice": 1128.00
+    },
+    {
+        "id": 2,
+        "type": 1,
+        "stock": "TSLA",
+        "userId": 101,
+        "amount": 5,
+        "totalPrice": 1204.00
+    },
+    {
+        "id": 3,
+        "type": 0,
+        "stock": "NVDA",
+        "userId": 102,
+        "amount": 15,
+        "totalPrice": 8087.25
+    },
+    {
+        "id": 4,
+        "type": 0,
+        "stock": "AAPL",
+        "userId": 103,
+        "amount": 25,
+        "totalPrice": 2820.00
+    },
+    {
+        "id": 5,
+        "type": 1,
+        "stock": "MSFT",
+        "userId": 102,
+        "amount": 8,
+        "totalPrice": 1236.00
+    },
+    {
+        "id": 6,
+        "type": 0,
+        "stock": "AMZN",
+        "userId": 104,
+        "amount": 2,
+        "totalPrice": 6424.80
+    },
+    {
+        "id": 7,
+        "type": 1,
+        "stock": "NVDA",
+        "userId": 101,
+        "amount": 3,
+        "totalPrice": 1626.45
+    },
+    {
+        "id": 8,
+        "type": 0,
+        "stock": "TSLA",
+        "userId": 105,
+        "amount": 12,
+        "totalPrice": 2878.80
+    },
+    {
+        "id": 9,
+        "type": 0,
+        "stock": "GOOGL",
+        "userId": 103,
+        "amount": 20,
+        "totalPrice": 3478.00
+    },
+    {
+        "id": 10,
+        "type": 1,
+        "stock": "AAPL",
+        "userId": 105,
+        "amount": 50,
+        "totalPrice": 5640.00
+    }
+]

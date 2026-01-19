@@ -1,0 +1,27 @@
+[
+    {
+        "id": 101,
+        "currency": "USD",
+        "amount": 12550.75
+    },
+    {
+        "id": 102,
+        "currency": "EUR",
+        "amount": 4320.00
+    },
+    {
+        "id": 103,
+        "currency": "GBP",
+        "amount": 890.45
+    },
+    {
+        "id": 104,
+        "currency": "JPY",
+        "amount": 1500000.00
+    },
+    {
+        "id": 105,
+        "currency": "CHF",
+        "amount": 27450.10
+    }
+]

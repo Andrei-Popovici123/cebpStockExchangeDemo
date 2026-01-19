@@ -1,0 +1,12 @@
+<div class="transaction-dashboard-card">
+
+    <h2 class="title">Recent Transactions</h2>
+
+    <div *ngIf="loading" class="loading">Loading...</div>
+
+    <div class="transactions" *ngIf="!loading">
+        <app-transaction-card *ngFor="let tx of transactions" [transaction]="tx">
+        </app-transaction-card>
+    </div>
+
+</div>

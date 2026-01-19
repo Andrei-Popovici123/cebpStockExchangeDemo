@@ -1,0 +1,13 @@
+<div class="login-auth-card">
+    <h2>Login</h2>
+
+    <input type="text" placeholder="Username" [(ngModel)]="username">
+
+    <input type="password" placeholder="Password" [(ngModel)]="password">
+
+    <a routerLink="/register">Sign Up</a>
+
+    <button (click)="login()">Login</button>
+
+    <p class="login-message">{{ message }}</p>
+</div>
