@@ -1,0 +1,11 @@
+<div class="stock-card">
+    <h2>{{ title }}</h2>
+
+    <app-candle-stick-chart [data]="candles" [title]="title">
+    </app-candle-stick-chart>
+
+    <div class="stock-card-actions">
+        <button class="buy-btn" (click)="buyStock()">Buy</button>
+        <button class="sell-btn" (click)="sellStock()">Sell</button>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.register-auth-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-cards);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 500px;
+    min-height: 400px;
+}
+
+.register-auth-card input {
+    width: 90%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.register-auth-card button {
+    width: 75%;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: var(--color-secondary-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 200ms linear;
+}
+
+.register-auth-card button:hover {
+    background-color: var(--color-secondary-blue-h);
+}
+
+.register-auth-card a {
+    text-decoration: none;
+    color: var(--color-secondary-blue);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.register-auth-card a:hover {
+    color: var(--color-secondary-blue-h);
+}
+
+
+.register-message {
+    margin-top: 10px;
+    color: var(--color-secondary-blue);
+}

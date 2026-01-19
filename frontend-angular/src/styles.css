@@ -1,1 +1,39 @@
+@import 'app/core/theme.css';
+@import 'app/core/size.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: var(--default-font-h1-size);
+}
+
+h2 {
+    font-size: var(--default-font-h2-size);
+}
+
+h3 {
+    font-size: var(--default-font-h3-size);
+}
+
+p,
+span,
+a,
+li {
+    font-size: var(--default-font-size);
+}
+
+
 /* You can add global styles to this file, and also import other style files */

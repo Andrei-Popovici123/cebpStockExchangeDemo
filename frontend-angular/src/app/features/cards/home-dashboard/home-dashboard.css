@@ -1,0 +1,28 @@
+.home-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--color-cards);
+    padding: 30px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.home-dashboard-welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home-dashboard-pies {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.home-dashboard-candle {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

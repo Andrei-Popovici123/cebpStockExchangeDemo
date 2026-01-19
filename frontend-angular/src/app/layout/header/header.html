@@ -1,0 +1,32 @@
+<header class="header">
+  <nav class="nav">
+
+    <!-- LEFT SECTION -->
+    <div class="nav-left">
+      <a routerLink="/home" class="nav-btn">Home</a>
+      <a routerLink="/stocks" class="nav-btn">Stocks</a>
+      <a routerLink="/trends" class="nav-btn">Trends</a>
+    </div>
+
+    <!-- CENTER LOGO -->
+    <div class="nav-center">
+      <a href="https://www.visacashapprb.com/">
+        <img src="vcarblogo.png" class="nav-logo">
+      </a>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="nav-right">
+      <a routerLink="/account" class="icon-btn">
+        <app-icon name="account" format="svg"></app-icon>
+      </a>
+      <a routerLink="/transactions" class="icon-btn">
+        <app-icon name="transaction" format="svg"></app-icon>
+      </a>
+      <button class="icon-btn" (click)="toggleDarkMode()">
+        <app-icon [name]="isDark() ? 'dark-mode' : 'light-mode'" , format="svg"></app-icon>
+      </button>
+    </div>
+
+  </nav>
+</header>

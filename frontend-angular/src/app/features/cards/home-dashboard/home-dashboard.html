@@ -1,0 +1,20 @@
+<div class="home-dashboard">
+
+    <div class="home-dashboard-welcome">
+        <app-welcome-card [username]="username"></app-welcome-card>
+    </div>
+
+    <div class="home-dashboard-pies">
+        <app-pie-stock-info-card title="Stocks Available" [labels]="pie1Labels" [values]="pie1Values">
+        </app-pie-stock-info-card>
+
+        <app-pie-stock-info-card title="Trasactions Made" [labels]="pie2Labels" [values]="pie2Values">
+        </app-pie-stock-info-card>
+    </div>
+
+    <div class="home-dashboard-candle">
+        <app-candle-stock-info-card title="AAPL Daily Candles" [data]="candleData">
+        </app-candle-stock-info-card>
+    </div>
+
+</div>

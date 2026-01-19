@@ -1,0 +1,32 @@
+:root {
+    /* Header */
+    --header-icon-size: 100px;
+    --header-logo-size: 250px;
+    --header-logo-translate: 55px;
+
+    --header-font-size: 30px;
+    --header-underline-bottom-size: 55px;
+
+    /* Navbar */
+    --nav-left-height: 10em;
+    --nav-left-width: 60%;
+    --nav-right-height: 10em;
+    --nav-right-width: 60%;
+    --nav-center-height: 6em;
+    --nav-left-padding: 12px 24px;
+    --nav-right-padding: 12px 24px;
+    --nav-center-padding: 12px 24px;
+    --nav-gap: 0px;
+
+    /* Footer */
+    --footer-font-size: 20px;
+    --footer-small-font-size: 15px;
+
+    /* Info-Card */
+
+    /* Defaults */
+    --default-font-h1-size: 40px;
+    --default-font-h2-size: 30px;
+    --default-font-h3-size: 20px;
+    --default-font-size: 20px;
+}
