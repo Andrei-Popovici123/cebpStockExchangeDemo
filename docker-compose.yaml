@@ -1,0 +1,64 @@
+version: "3.9"
+
+services:  
+  dotnet-api:
+    build: ./backend-dotnet/StockExchangeDotNetBE/StockExchangeDotNetBE/
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://0.0.0.0:5000
+
+      ConnectionStrings__StockExchangeDB: >
+        Server=sqlserver;
+        Database=${SQLSERVER_DB};
+        User=${SQLSERVER_USER};
+        Password=${SQLSERVER_PASSWORD};
+        TrustServerCertificate=True
+
+      SpringService__BaseUrl: http://spring-api:8080
+    ports:
+      - "5000:5000"
+    depends_on:
+      - sqlserver
+    networks:
+      - app-net
+
+  spring-api:
+    build: ./backend-java
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE}
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      JAVA_OPTS: ${JAVA_OPTS}
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    networks:
+      - app-net
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: ${SQLSERVER_PASSWORD}
+    volumes:
+      - sql_data:/var/opt/mssql
+    networks:
+      - app-net
+
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - app-net
+
+networks:
+  app-net:
+
+volumes:
+  sql_data:
+  mysql_data:

@@ -32,6 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 
+.env
 
 ### VS ###
 .vs
@@ -43,3 +44,6 @@ build/
 /backend-dotnet/StockExchangeDotNetBE/StockExchangeDotNetBE/bin/Debug/net10.0
 /backend-dotnet/StockExchangeDotNetBE/StockExchange.BusinessLogic/obj
 /backend-dotnet/StockExchangeDotNetBE/StockExchange.BusinessLogic/bin/Debug/net10.0
+
+# Snyk Security Extension - AI Rules (auto-generated)
+.github/instructions/snyk_rules.instructions.md
