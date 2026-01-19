@@ -18,3 +18,19 @@
     flex-direction: column;
     gap: 16px;
 }
+
+.logout-btn {
+    align-self: flex-start;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background-color: var(--color-secondary-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 200ms linear;
+}
+
+.logout-btn:hover {
+    background-color: var(--color-secondary-blue-h);
+}
