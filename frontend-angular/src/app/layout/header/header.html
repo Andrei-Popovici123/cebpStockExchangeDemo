@@ -17,12 +17,12 @@
 
     <!-- RIGHT SECTION -->
     <div class="nav-right">
-      <a routerLink="/account" class="icon-btn">
-        <app-icon name="account" format="svg"></app-icon>
+      <a [routerLink]="loggedIn ? '/account' : '/login'" class="icon-btn">
+        <app-icon [name]="loggedIn ? 'account-logged' : 'account'" format="svg"> </app-icon>
       </a>
-      <a routerLink="/transactions" class="icon-btn">
+      <button class="icon-btn" (click)="handleTransactionsClick()">
         <app-icon name="transaction" format="svg"></app-icon>
-      </a>
+      </button>
       <button class="icon-btn" (click)="toggleDarkMode()">
         <app-icon [name]="isDark() ? 'dark-mode' : 'light-mode'" , format="svg"></app-icon>
       </button>

@@ -33,8 +33,8 @@ export class TrendsDashboard implements OnInit {
 
   private groupByStock(history: StockHistory[]) {
     return history.reduce((acc, entry) => {
-      if (!acc[entry.stock]) acc[entry.stock] = [];
-      acc[entry.stock].push(entry);
+      if (!acc[entry.stock.name]) acc[entry.stock.name] = [];
+      acc[entry.stock.name].push(entry);
       return acc;
     }, {} as Record<string, StockHistory[]>);
   }

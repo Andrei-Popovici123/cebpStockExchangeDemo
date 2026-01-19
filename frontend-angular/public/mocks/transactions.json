@@ -2,81 +2,841 @@
     {
         "id": 1,
         "type": 0,
-        "stock": "AAPL",
         "userId": 101,
         "amount": 10,
-        "totalPrice": 1128.00
+        "totalPrice": 1128.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
     },
     {
         "id": 2,
         "type": 1,
-        "stock": "TSLA",
         "userId": 101,
         "amount": 5,
-        "totalPrice": 1204.00
+        "totalPrice": 1204.00,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
     },
     {
         "id": 3,
         "type": 0,
-        "stock": "NVDA",
-        "userId": 102,
+        "userId": 101,
         "amount": 15,
-        "totalPrice": 8087.25
+        "totalPrice": 8087.25,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
     },
     {
         "id": 4,
         "type": 0,
-        "stock": "AAPL",
-        "userId": 103,
+        "userId": 101,
         "amount": 25,
-        "totalPrice": 2820.00
+        "totalPrice": 2820.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
     },
     {
         "id": 5,
         "type": 1,
-        "stock": "MSFT",
-        "userId": 102,
+        "userId": 101,
         "amount": 8,
-        "totalPrice": 1236.00
+        "totalPrice": 1236.00,
+        "stock": {
+            "id": 2,
+            "name": "MSFT",
+            "amount": 850000,
+            "price": 154.50,
+            "apreCoef": 1.02
+        }
     },
     {
         "id": 6,
         "type": 0,
-        "stock": "AMZN",
-        "userId": 104,
+        "userId": 101,
         "amount": 2,
-        "totalPrice": 6424.80
+        "totalPrice": 6424.80,
+        "stock": {
+            "id": 3,
+            "name": "AMZN",
+            "amount": 400000,
+            "price": 3212.40,
+            "apreCoef": 0.98
+        }
     },
     {
         "id": 7,
         "type": 1,
-        "stock": "NVDA",
         "userId": 101,
         "amount": 3,
-        "totalPrice": 1626.45
+        "totalPrice": 1626.45,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
     },
     {
         "id": 8,
         "type": 0,
-        "stock": "TSLA",
-        "userId": 105,
+        "userId": 101,
         "amount": 12,
-        "totalPrice": 2878.80
+        "totalPrice": 2878.80,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
     },
     {
         "id": 9,
         "type": 0,
-        "stock": "GOOGL",
-        "userId": 103,
+        "userId": 101,
         "amount": 20,
-        "totalPrice": 3478.00
+        "totalPrice": 3478.00,
+        "stock": {
+            "id": 5,
+            "name": "GOOGL",
+            "amount": 600000,
+            "price": 173.90,
+            "apreCoef": 1.01
+        }
     },
     {
         "id": 10,
         "type": 1,
-        "stock": "AAPL",
-        "userId": 105,
+        "userId": 101,
         "amount": 50,
-        "totalPrice": 5640.00
+        "totalPrice": 5640.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 11,
+        "type": 0,
+        "userId": 101,
+        "amount": 15,
+        "totalPrice": 1692.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 12,
+        "type": 0,
+        "userId": 102,
+        "amount": 5,
+        "totalPrice": 2710.50,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 13,
+        "type": 1,
+        "userId": 103,
+        "amount": 10,
+        "totalPrice": 2413.00,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
+    },
+    {
+        "id": 14,
+        "type": 0,
+        "userId": 104,
+        "amount": 20,
+        "totalPrice": 3090.00,
+        "stock": {
+            "id": 2,
+            "name": "MSFT",
+            "amount": 850000,
+            "price": 154.50,
+            "apreCoef": 1.02
+        }
+    },
+    {
+        "id": 15,
+        "type": 0,
+        "userId": 105,
+        "amount": 100,
+        "totalPrice": 11680.00,
+        "stock": {
+            "id": 9,
+            "name": "AMD",
+            "amount": 1800000,
+            "price": 116.80,
+            "apreCoef": 1.12
+        }
+    },
+    {
+        "id": 16,
+        "type": 1,
+        "userId": 101,
+        "amount": 5,
+        "totalPrice": 564.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 17,
+        "type": 0,
+        "userId": 102,
+        "amount": 2,
+        "totalPrice": 6424.80,
+        "stock": {
+            "id": 3,
+            "name": "AMZN",
+            "amount": 400000,
+            "price": 3212.40,
+            "apreCoef": 0.98
+        }
+    },
+    {
+        "id": 18,
+        "type": 0,
+        "userId": 103,
+        "amount": 8,
+        "totalPrice": 4352.80,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 19,
+        "type": 1,
+        "userId": 104,
+        "amount": 15,
+        "totalPrice": 5013.00,
+        "stock": {
+            "id": 8,
+            "name": "META",
+            "amount": 1100000,
+            "price": 334.20,
+            "apreCoef": 1.08
+        }
+    },
+    {
+        "id": 20,
+        "type": 0,
+        "userId": 105,
+        "amount": 25,
+        "totalPrice": 5997.50,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
+    },
+    {
+        "id": 21,
+        "type": 0,
+        "userId": 101,
+        "amount": 10,
+        "totalPrice": 1739.00,
+        "stock": {
+            "id": 5,
+            "name": "GOOGL",
+            "amount": 600000,
+            "price": 173.90,
+            "apreCoef": 1.01
+        }
+    },
+    {
+        "id": 22,
+        "type": 1,
+        "userId": 102,
+        "amount": 12,
+        "totalPrice": 1854.00,
+        "stock": {
+            "id": 2,
+            "name": "MSFT",
+            "amount": 850000,
+            "price": 154.50,
+            "apreCoef": 1.02
+        }
+    },
+    {
+        "id": 23,
+        "type": 0,
+        "userId": 103,
+        "amount": 200,
+        "totalPrice": 12830.00,
+        "stock": {
+            "id": 10,
+            "name": "PFE",
+            "amount": 4200000,
+            "price": 64.15,
+            "apreCoef": 0.92
+        }
+    },
+    {
+        "id": 24,
+        "type": 0,
+        "userId": 104,
+        "amount": 5,
+        "totalPrice": 1071.50,
+        "stock": {
+            "id": 11,
+            "name": "NFLX",
+            "amount": 300000,
+            "price": 214.30,
+            "apreCoef": 1.04
+        }
+    },
+    {
+        "id": 25,
+        "type": 1,
+        "userId": 105,
+        "amount": 30,
+        "totalPrice": 3384.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 26,
+        "type": 0,
+        "userId": 101,
+        "amount": 4,
+        "totalPrice": 2177.20,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 27,
+        "type": 0,
+        "userId": 102,
+        "amount": 10,
+        "totalPrice": 2399.00,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
+    },
+    {
+        "id": 28,
+        "type": 1,
+        "userId": 103,
+        "amount": 1,
+        "totalPrice": 3212.40,
+        "stock": {
+            "id": 3,
+            "name": "AMZN",
+            "amount": 400000,
+            "price": 3212.40,
+            "apreCoef": 0.98
+        }
+    },
+    {
+        "id": 29,
+        "type": 0,
+        "userId": 104,
+        "amount": 50,
+        "totalPrice": 5840.00,
+        "stock": {
+            "id": 9,
+            "name": "AMD",
+            "amount": 1800000,
+            "price": 116.80,
+            "apreCoef": 1.12
+        }
+    },
+    {
+        "id": 30,
+        "type": 0,
+        "userId": 105,
+        "amount": 150,
+        "totalPrice": 6915.00,
+        "stock": {
+            "id": 6,
+            "name": "INTC",
+            "amount": 3500000,
+            "price": 46.10,
+            "apreCoef": 0.95
+        }
+    },
+    {
+        "id": 31,
+        "type": 1,
+        "userId": 101,
+        "amount": 2,
+        "totalPrice": 1088.60,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 32,
+        "type": 0,
+        "userId": 102,
+        "amount": 40,
+        "totalPrice": 4512.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 33,
+        "type": 0,
+        "userId": 103,
+        "amount": 10,
+        "totalPrice": 3342.00,
+        "stock": {
+            "id": 8,
+            "name": "META",
+            "amount": 1100000,
+            "price": 334.20,
+            "apreCoef": 1.08
+        }
+    },
+    {
+        "id": 34,
+        "type": 1,
+        "userId": 104,
+        "amount": 8,
+        "totalPrice": 1926.40,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
+    },
+    {
+        "id": 35,
+        "type": 0,
+        "userId": 105,
+        "amount": 15,
+        "totalPrice": 2317.50,
+        "stock": {
+            "id": 2,
+            "name": "MSFT",
+            "amount": 850000,
+            "price": 154.50,
+            "apreCoef": 1.02
+        }
+    },
+    {
+        "id": 36,
+        "type": 0,
+        "userId": 101,
+        "amount": 5,
+        "totalPrice": 869.50,
+        "stock": {
+            "id": 5,
+            "name": "GOOGL",
+            "amount": 600000,
+            "price": 173.90,
+            "apreCoef": 1.01
+        }
+    },
+    {
+        "id": 37,
+        "type": 1,
+        "userId": 102,
+        "amount": 100,
+        "totalPrice": 6415.00,
+        "stock": {
+            "id": 10,
+            "name": "PFE",
+            "amount": 4200000,
+            "price": 64.15,
+            "apreCoef": 0.92
+        }
+    },
+    {
+        "id": 38,
+        "type": 0,
+        "userId": 103,
+        "amount": 10,
+        "totalPrice": 2143.00,
+        "stock": {
+            "id": 11,
+            "name": "NFLX",
+            "amount": 300000,
+            "price": 214.30,
+            "apreCoef": 1.04
+        }
+    },
+    {
+        "id": 39,
+        "type": 0,
+        "userId": 104,
+        "amount": 6,
+        "totalPrice": 3265.80,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 40,
+        "type": 1,
+        "userId": 105,
+        "amount": 20,
+        "totalPrice": 2336.00,
+        "stock": {
+            "id": 9,
+            "name": "AMD",
+            "amount": 1800000,
+            "price": 116.80,
+            "apreCoef": 1.12
+        }
+    },
+    {
+        "id": 41,
+        "type": 0,
+        "userId": 101,
+        "amount": 12,
+        "totalPrice": 1353.60,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 42,
+        "type": 0,
+        "userId": 102,
+        "amount": 3,
+        "totalPrice": 9637.20,
+        "stock": {
+            "id": 3,
+            "name": "AMZN",
+            "amount": 400000,
+            "price": 3212.40,
+            "apreCoef": 0.98
+        }
+    },
+    {
+        "id": 43,
+        "type": 1,
+        "userId": 103,
+        "amount": 5,
+        "totalPrice": 772.50,
+        "stock": {
+            "id": 2,
+            "name": "MSFT",
+            "amount": 850000,
+            "price": 154.50,
+            "apreCoef": 1.02
+        }
+    },
+    {
+        "id": 44,
+        "type": 0,
+        "userId": 104,
+        "amount": 14,
+        "totalPrice": 3362.80,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
+    },
+    {
+        "id": 45,
+        "type": 0,
+        "userId": 105,
+        "amount": 2,
+        "totalPrice": 1078.30,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 46,
+        "type": 1,
+        "userId": 101,
+        "amount": 8,
+        "totalPrice": 1391.20,
+        "stock": {
+            "id": 5,
+            "name": "GOOGL",
+            "amount": 600000,
+            "price": 173.90,
+            "apreCoef": 1.01
+        }
+    },
+    {
+        "id": 47,
+        "type": 0,
+        "userId": 102,
+        "amount": 200,
+        "totalPrice": 9220.00,
+        "stock": {
+            "id": 6,
+            "name": "INTC",
+            "amount": 3500000,
+            "price": 46.10,
+            "apreCoef": 0.95
+        }
+    },
+    {
+        "id": 48,
+        "type": 0,
+        "userId": 103,
+        "amount": 25,
+        "totalPrice": 8355.00,
+        "stock": {
+            "id": 8,
+            "name": "META",
+            "amount": 1100000,
+            "price": 334.20,
+            "apreCoef": 1.08
+        }
+    },
+    {
+        "id": 49,
+        "type": 1,
+        "userId": 104,
+        "amount": 10,
+        "totalPrice": 1128.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 50,
+        "type": 0,
+        "userId": 105,
+        "amount": 3,
+        "totalPrice": 642.90,
+        "stock": {
+            "id": 11,
+            "name": "NFLX",
+            "amount": 300000,
+            "price": 214.30,
+            "apreCoef": 1.04
+        }
+    },
+    {
+        "id": 51,
+        "type": 0,
+        "userId": 101,
+        "amount": 60,
+        "totalPrice": 7008.00,
+        "stock": {
+            "id": 9,
+            "name": "AMD",
+            "amount": 1800000,
+            "price": 116.80,
+            "apreCoef": 1.12
+        }
+    },
+    {
+        "id": 52,
+        "type": 1,
+        "userId": 102,
+        "amount": 10,
+        "totalPrice": 5443.00,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 53,
+        "type": 0,
+        "userId": 103,
+        "amount": 20,
+        "totalPrice": 4816.00,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
+    },
+    {
+        "id": 54,
+        "type": 0,
+        "userId": 104,
+        "amount": 100,
+        "totalPrice": 11280.00,
+        "stock": {
+            "id": 1,
+            "name": "AAPL",
+            "amount": 1500000,
+            "price": 112.80,
+            "apreCoef": 1.05
+        }
+    },
+    {
+        "id": 55,
+        "type": 1,
+        "userId": 105,
+        "amount": 5,
+        "totalPrice": 16062.00,
+        "stock": {
+            "id": 3,
+            "name": "AMZN",
+            "amount": 400000,
+            "price": 3212.40,
+            "apreCoef": 0.98
+        }
+    },
+    {
+        "id": 56,
+        "type": 0,
+        "userId": 101,
+        "amount": 30,
+        "totalPrice": 4635.00,
+        "stock": {
+            "id": 2,
+            "name": "MSFT",
+            "amount": 850000,
+            "price": 154.50,
+            "apreCoef": 1.02
+        }
+    },
+    {
+        "id": 57,
+        "type": 0,
+        "userId": 102,
+        "amount": 50,
+        "totalPrice": 3207.50,
+        "stock": {
+            "id": 10,
+            "name": "PFE",
+            "amount": 4200000,
+            "price": 64.15,
+            "apreCoef": 0.92
+        }
+    },
+    {
+        "id": 58,
+        "type": 1,
+        "userId": 103,
+        "amount": 1,
+        "totalPrice": 539.15,
+        "stock": {
+            "id": 7,
+            "name": "NVDA",
+            "amount": 950000,
+            "price": 539.15,
+            "apreCoef": 1.25
+        }
+    },
+    {
+        "id": 59,
+        "type": 0,
+        "userId": 104,
+        "amount": 15,
+        "totalPrice": 2608.50,
+        "stock": {
+            "id": 5,
+            "name": "GOOGL",
+            "amount": 600000,
+            "price": 173.90,
+            "apreCoef": 1.01
+        }
+    },
+    {
+        "id": 60,
+        "type": 0,
+        "userId": 105,
+        "amount": 5,
+        "totalPrice": 1204.00,
+        "stock": {
+            "id": 4,
+            "name": "TSLA",
+            "amount": 2100000,
+            "price": 240.80,
+            "apreCoef": 1.15
+        }
     }
 ]

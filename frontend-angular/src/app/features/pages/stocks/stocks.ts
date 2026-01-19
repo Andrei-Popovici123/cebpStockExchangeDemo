@@ -28,7 +28,7 @@ export class Stocks implements OnInit {
 
   groupByStock(history: StockHistory[]) {
     return history.reduce((acc, entry) => {
-      const name = entry.stock;
+      const name = entry.stock.name;
       if (!acc[name]) acc[name] = [];
       acc[name].push(entry);
       return acc;
