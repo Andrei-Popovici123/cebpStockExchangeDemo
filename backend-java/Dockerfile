@@ -2,9 +2,9 @@
 
 WORKDIR /app
 
-COPY target/server-0.0.1-SNAPSHOT.jar stockService.jar
+COPY target/server-0.0.1-SNAPSHOT.jar app.jar
 
 EXPOSE 8080
 
 
-ENTRYPOINT ["java","-jar","stockService.jar"]
+ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar app.jar"]
