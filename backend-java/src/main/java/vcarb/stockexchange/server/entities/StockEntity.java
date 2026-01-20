@@ -32,9 +32,9 @@ public class StockEntity {
     private double apreCoef = 0.1;
 
 
-    @OneToOne(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "stock", cascade = CascadeType.ALL, orphanRemoval = true)
    @JsonIgnore
-    private StockHistoryEntity stockHistory;
+    private List<StockHistoryEntity> stockHistory;
     public StockEntity(){}
 
     public StockEntity(String name, int amount, double price, double apreCoef) {
@@ -61,11 +61,11 @@ public class StockEntity {
     public List<TransactionEntity> getTransactions() { return transactions; }
     public void setTransactions(List<TransactionEntity> transactions) { this.transactions = transactions; }
 
-    public StockHistoryEntity getStockHistory() {
+    public List<StockHistoryEntity> getStockHistory() {
         return stockHistory;
     }
 
-    public void setStockHistory(StockHistoryEntity stockHistory) {
+    public void setStockHistory(List<StockHistoryEntity> stockHistory) {
         this.stockHistory = stockHistory;
     }
 }
