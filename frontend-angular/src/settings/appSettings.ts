@@ -1,6 +1,6 @@
 export const appSettings = {
-    production: false,
-    useMock: true,
+    production: true,
+    useMock: false,
     dotnetDomain: '',
     javaDomain: ''
 };

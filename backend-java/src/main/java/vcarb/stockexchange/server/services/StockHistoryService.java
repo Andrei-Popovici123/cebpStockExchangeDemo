@@ -1,5 +1,7 @@
 package vcarb.stockexchange.server.services;
 
+import jakarta.transaction.Transactional;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import vcarb.stockexchange.server.dto.StockHistoryDTO;
 import vcarb.stockexchange.server.entities.StockEntity;
@@ -46,7 +48,29 @@ public class StockHistoryService {
                 LocalDateTime.now(ZoneOffset.UTC)
         ));
     }
+    @Scheduled(fixedRate = 20000)
+    @Transactional
+    public void updateStockHistory() {
+        List<StockEntity> stocks = stockRepository.findAll();
 
+        for (StockEntity stock : stocks) {
+            updatePeriodicStockHistory(stock);
+        }
+    }
+    @Transactional
+    public StockHistoryEntity updatePeriodicStockHistory(StockEntity stock){
+        return stockHistoryRepository.save( new StockHistoryEntity(
+                stock.getPrice(),
+                stock,
+                stock.getPrice(),
+                stock.getPrice(),
+                stock.getPrice(),
+                stock.getAmount(),
+                LocalDateTime.now(ZoneOffset.UTC)
+        ));
+
+
+    }
     public StockHistoryEntity updateStockHistory(Long id,StockHistoryDTO stockHistoryDTO){
         return stockHistoryRepository.findById(id)
                 .map( stockHistory -> {

@@ -27,8 +27,8 @@ public class StockHistoryEntity {
     @Column(nullable = false)
     LocalDateTime timeframe;
 
-    @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "stockId", nullable = false, unique = true)
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "stockId", nullable = false)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private StockEntity stock;
 
